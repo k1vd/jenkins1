@@ -24,8 +24,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry( '', registryCredential ) {
-            
-            bat "docker push dockerimagename:latest"
+            dockerImage.push()
           }
         }
 
