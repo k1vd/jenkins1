@@ -24,7 +24,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry( '', registryCredential ) {
-            bat "docker push at/react-app:latest"
+            bat "docker push at/react-app:build"
           }
         }
 
