@@ -23,8 +23,8 @@ pipeline {
       }
       steps {
         script {
-          docker.withRegistry( '', registryCredential ) {
-            bat "docker push at/react-app:build"
+          docker.withRegistry('https://registry-1.docker.io/v2/', 'dockerhub-credential') {
+      dockerImage.push()
           }
         }
 
