@@ -24,7 +24,7 @@ pipeline {
       steps {
         script {
           docker.withRegistry( '', registryCredential ) {
-            dockerImage.push()
+            bat "docker push at/react-app:latest"
           }
         }
 
