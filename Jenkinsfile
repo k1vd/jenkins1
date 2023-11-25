@@ -23,7 +23,7 @@ pipeline {
       }
       steps {
         script {
-          docker.withRegistry('https://registry-1.docker.io/v2/', 'dockerhub-credential') {
+          docker.withRegistry('https://registry-1.docker.io/v2/', registryCredential) {
       dockerImage.push()
           }
         }
@@ -42,7 +42,7 @@ pipeline {
 
   }
   environment {
-    dockerimagename = 'at/react-app'
+    dockerimagename = 'athapa1/react-app'
     dockerImage = ''
   }
 }
