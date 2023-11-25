@@ -25,7 +25,7 @@ pipeline {
         script {
           docker.withRegistry( '', registryCredential ) {
             
-            bat "docker push IMAGE_NAME:latest"
+            bat "docker push dockerimagename:latest"
           }
         }
 
