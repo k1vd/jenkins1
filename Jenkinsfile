@@ -33,10 +33,8 @@ pipeline {
 
     stage('Deploying React.js container to Kubernetes') {
       steps {
-        kubectl apply -f deployment.yaml
-        kubectl apply -f service.yaml
-        }
-
+        bat 'kubectl apply -f deployment.yaml'
+        bat 'kubectl apply -f service.yaml'
       }
     }
 
