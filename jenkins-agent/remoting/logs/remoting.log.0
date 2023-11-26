@@ -1,10 +1,10 @@
-Nov 25, 2023 3:34:19 PM hudson.remoting.jnlp.Main createEngine
+Nov 26, 2023 6:37:54 PM hudson.remoting.jnlp.Main createEngine
 INFO: Setting up agent: w1
-Nov 25, 2023 3:34:20 PM hudson.remoting.Engine startEngine
+Nov 26, 2023 6:37:54 PM hudson.remoting.Engine startEngine
 INFO: Using Remoting version: 3131.vf2b_b_798b_ce99
-Nov 25, 2023 3:34:20 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+Nov 26, 2023 6:37:54 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
 INFO: Using /mnt/c/MyWork/RND/docker/jenkins/test_k8_app/src/./jenkins-agent/remoting as a remoting work directory
-Nov 25, 2023 3:34:20 PM hudson.remoting.jnlp.Main$CuiListener status
+Nov 26, 2023 6:37:54 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: WebSocket connection open
-Nov 25, 2023 3:34:20 PM hudson.remoting.jnlp.Main$CuiListener status
+Nov 26, 2023 6:37:55 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Connected
