@@ -9,4 +9,4 @@ spec:
   ports:
   - protocol: TCP
     port: 33333 #Service port
-    targetPort: 33333 #The port for the React.js application container
+    targetPort: 3333 #The port for the React.js application container
