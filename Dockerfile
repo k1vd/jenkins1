@@ -18,8 +18,8 @@ RUN npm i
 #Copy the remaining application folders and files from the local src folder to the Docker app working directory
 COPY . .
 
-#Expose the application container on port 3000
-EXPOSE 3000
+#Expose the application container on port
+EXPOSE 4200
 
 #The command to start the application container
-CMD ["npm", "start"]
+CMD ["ng", "serve"]
