@@ -5,21 +5,21 @@ FROM node:19-alpine3.16
 RUN apk update && apk add curl
 
 #It will create a working directory for Docker. The Docker image will be created in this working directory.
-WORKDIR /react-app
+WORKDIR /angular-app
 
-#Copy the React.js application dependencies from the package.json to the react-app working directory.
+#Copy the application dependencies from the package.json to the app working directory.
 COPY package.json .
 
 COPY package-lock.json .
 
-#install all the React.js application dependencies
+#install all application dependencies
 RUN npm i
 
-#Copy the remaining React.js application folders and files from the local src folder to the Docker react-app working directory
+#Copy the remaining application folders and files from the local src folder to the Docker app working directory
 COPY . .
 
-#Expose the React.js application container on port 3000
+#Expose the application container on port 3000
 EXPOSE 3000
 
-#The command to start the React.js application container
+#The command to start the application container
 CMD ["npm", "start"]

@@ -31,7 +31,7 @@ pipeline {
       }
     }
 
-    stage('Deploying React.js container to Kubernetes') {
+    stage('Deploying Angular container to Kubernetes') {
       steps {
         bat 'kubectl apply -f deployment.yaml'
         bat 'kubectl apply -f service.yaml'
@@ -40,7 +40,7 @@ pipeline {
 
   }
   environment {
-    dockerimagename = 'athapa1/react-app'
+    dockerimagename = 'athapa1/angular-app'
     dockerImage = ''
   }
 }

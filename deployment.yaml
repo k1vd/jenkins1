@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment #The name of the Kubernetes Deployment to be created in the Kubernetes cluster
+  name: angular-dep
   labels:
-    app: react-app
+    app: angular-app
 spec:
-  replicas: 2 #The number of pods to be created in the Kubernetes cluster for the React.js application container
+  replicas: 2 
   selector:
     matchLabels:
-      app: react-app
+      app: angular-app
   template:
     metadata:
       labels:
-        app: react-app 
+        app: angular-app 
     spec:
       containers:
-      - name: react-app #The name of the react.js application container
-        image: athapa1/react-app:latest #The Docker image for building the React.js application container
+      - name: angular-app
+        image: athapa1/angular-app:latest 
         ports:
-        - containerPort: 3000 #The port for the React.js application   container
+        - containerPort: 3000
