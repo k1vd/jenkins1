@@ -18,8 +18,8 @@ RUN npm i
 #Copy the remaining React.js application folders and files from the local src folder to the Docker react-app working directory
 COPY . .
 
-#Expose the React.js application container on port 3333
-EXPOSE 3333
+#Expose the React.js application container on port 80
+EXPOSE 80
 
 #The command to start the React.js application container
 CMD ["npm", "start"]
