@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout Source') {
       steps {
-        git 'https://github.com/k1vd/jenkins1.git'
+        git branch:branchName, url:'https://github.com/k1vd/jenkins1.git'
       }
     }
 
@@ -42,5 +42,6 @@ pipeline {
   environment {
     dockerimagename = 'athapa1/react-app'
     dockerImage = ''
+    branchName = "${env.GIT_BRANCH.split('/').size() == 1 ? env.GIT_BRANCH.split('/')[-1] : env.GIT_BRANCH.split('/')[1..-1].join('/')}"
   }
 }
