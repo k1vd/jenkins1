@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular9-helloworld-example' title`, () => {
+  it(`should have the 'app1' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular9-helloworld-example');
+    expect(app.title).toEqual('app1');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular9-helloworld-example');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, app1');
   });
 });
