@@ -13,7 +13,7 @@ RUN npm i
 RUN npm install -g @angular/cli
 
 #add curl
-RUN apk update && apk add curl
+#RUN apk update && apk add curl
 
 COPY . .
 RUN npm run build
