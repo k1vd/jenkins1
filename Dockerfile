@@ -14,6 +14,7 @@ COPY package-lock.json .
 
 #install all application dependencies
 RUN npm i
+RUN npm install -g @angular/cli
 
 #Copy the remaining application folders and files from the local src folder to the Docker app working directory
 COPY . .
