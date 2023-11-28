@@ -8,22 +8,22 @@ RUN apk update && apk add curl
 WORKDIR /angular-app
 
 #Copy the application dependencies from the package.json to the app working directory.
-COPY package.json .
+COPY src/package.json .
 
-COPY package-lock.json .
+COPY src/package-lock.json .
 
 #install all application dependencies
 RUN npm i
 RUN npm install -g @angular/cli
 
 #Copy the remaining application folders and files from the local src folder to the Docker app working directory
-COPY . .
+COPY ./src .
 
 #Expose the application container on port
 EXPOSE 4200
 
 #The command to start the application container
-CMD ls .
+#CMD ls .
 #CD /angular-app
 RUN ng build
-#CMD ng serve --host 0.0.0.0 --port 4200
+CMD ng serve --host 0.0.0.0 --port 4200
