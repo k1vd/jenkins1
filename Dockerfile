@@ -23,7 +23,9 @@ RUN npm run build
 # ----------------------------
 FROM nginx
 
-COPY /nginx.conf  /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/default.conf
+COPY /nginx.conf /etc/nginx/conf.d
+#COPY /nginx.conf  /etc/nginx/conf.d/default.conf
 COPY --from=build /angular-app/dist/app1/browser /usr/share/nginx/html
 
 #Expose the application container on port
