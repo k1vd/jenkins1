@@ -21,13 +21,13 @@ RUN npm run build
 # ----------------------------
 # run with nginx
 # ----------------------------
-#FROM nginx
+FROM nginx
 
 #RUN rm /etc/nginx/conf.d/default.conf
 #COPY nginx.conf /etc/nginx/conf.d
-#COPY --from=build /src/dist/angular-tutorial /usr/share/nginx/html
+COPY --from=build /angular-app/dist/app1 /usr/share/nginx/html
 
 #Expose the application container on port
 EXPOSE 4200
 
-CMD ng serve --host 0.0.0.0 --port 4200
+#CMD ng serve --host 0.0.0.0 --port 4200
