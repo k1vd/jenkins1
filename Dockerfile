@@ -28,6 +28,6 @@ FROM nginx
 COPY --from=build /angular-app/dist/app1 /usr/share/nginx/html
 
 #Expose the application container on port
-EXPOSE 4200
+EXPOSE 80 #ng serve port - 4200
 
-#CMD ng serve --host 0.0.0.0 --port 4200
+#CMD ng serve --host 0.0.0.0 --port 80 #4200
