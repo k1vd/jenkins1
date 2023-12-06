@@ -33,14 +33,10 @@ pipeline {
 
     stage('Deploying application container to Kubernetes') {
       steps {
-        if (Boolean.valueOf(env.UNIX)) {
-            sh 'kubectl apply -f deployment.yaml'
-            sh 'kubectl apply -f service.yaml'
-        }
-        else {
+            #sh 'kubectl apply -f deployment.yaml'
+            #sh 'kubectl apply -f service.yaml'
             bat 'kubectl apply -f deployment.yaml'
             bat 'kubectl apply -f service.yaml'
-        }
       }
     }
 
@@ -49,6 +45,6 @@ pipeline {
     dockerimagename = 'athapa1/angular-app'
     dockerImage = ''
     branchName = "${env.GIT_BRANCH.split('/').size() == 1 ? env.GIT_BRANCH.split('/')[-1] : env.GIT_BRANCH.split('/')[1..-1].join('/')}"
-    env.UNIX = isUnix()
+    #env.UNIX = isUnix()
   }
 }
