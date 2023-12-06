@@ -33,8 +33,6 @@ pipeline {
 
     stage('Deploying application container to Kubernetes') {
       steps {
-            #sh 'kubectl apply -f deployment.yaml'
-            #sh 'kubectl apply -f service.yaml'
             bat 'kubectl apply -f deployment.yaml'
             bat 'kubectl apply -f service.yaml'
       }
