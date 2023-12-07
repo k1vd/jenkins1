@@ -43,6 +43,5 @@ pipeline {
     dockerimagename = 'athapa1/angular-app'
     dockerImage = ''
     branchName = "${env.GIT_BRANCH.split('/').size() == 1 ? env.GIT_BRANCH.split('/')[-1] : env.GIT_BRANCH.split('/')[1..-1].join('/')}"
-    #env.UNIX = isUnix()
   }
 }
